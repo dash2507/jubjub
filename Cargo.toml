@@ -20,7 +20,7 @@ exclude = [".github/workflows/ci.yml", "github/workflows/rust.yml",
 
 [dependencies]
 dusk-bytes = "0.1"
-dusk-bls12_381 = {path = "../bls12_381"}
+dusk-bls12_381 = {git = "https://github.com/PlasmNetwork/bls12_381", rev = "177a0911b050316984197d2f2bea9f0c9799e214"}
 subtle = {git = "https://github.com/PlasmNetwork/subtle", rev="4fdd34334e6a91b6c8024401db68116b2b07c64a"}
 rand_core = {version = "0.6", default-features=false}
 canonical = {version = "0.6", optional = true}
