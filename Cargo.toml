@@ -3,14 +3,15 @@ authors = [
     "Sean Bowe <ewillbefull@gmail.com>",
     "Eirik Ogilvie-Wigley <eowigley@gmail.com>",
     "Jack Grigg <thestr4d@gmail.com>",
-    "CPerezz <carlos@dusk.network>"
+    "CPerezz <carlos@dusk.network>",
+    "NoCtrlZ<shinsaku.ashizawa@artree.co.jp>"
 ]
 description = "Dusk's fork of the implementation of the Jubjub elliptic curve group"
 homepage = "https://github.com/dusk-network/jubjub"
 license = "MIT/Apache-2.0"
-name = "dusk-jubjub"
+name = "plonk-jubjub"
 repository = "https://github.com/dusk-network/jubjub"
-version = "0.10.1"
+version = "0.1.0"
 keywords = ["cryptography", "jubjub", "zk-snarks", "ecc", "elliptic-curve"]
 categories =["algorithms", "cryptography", "science"]
 edition = "2018"
@@ -20,8 +21,8 @@ exclude = [".github/workflows/ci.yml", "github/workflows/rust.yml",
 
 [dependencies]
 dusk-bytes = "0.1"
-dusk-bls12_381 = {git = "https://github.com/PlasmNetwork/bls12_381", rev = "177a0911b050316984197d2f2bea9f0c9799e214"}
-subtle = {git = "https://github.com/PlasmNetwork/subtle", rev="4fdd34334e6a91b6c8024401db68116b2b07c64a"}
+plonk-bls12_381 = "0.1"
+parity-subtle = "0.1"
 rand_core = {version = "0.6", default-features=false}
 canonical = {version = "0.6", optional = true}
 canonical_derive = {version = "0.6", optional = true}
@@ -32,6 +33,6 @@ blake2 = "0.9"
 
 [features]
 default = ["std"]
-std = ["dusk-bls12_381/default"]
-canon = ["canonical", "canonical_derive", "dusk-bls12_381/canon"]
+std = ["plonk-bls12_381/default"]
+canon = ["canonical", "canonical_derive", "plonk-bls12_381/canon"]
 
