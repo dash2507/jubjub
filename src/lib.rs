@@ -52,8 +52,8 @@ mod fr;
 /// Implementation of ElGamal encryption scheme with JubJub
 pub mod elgamal;
 
-pub use plonk_bls12_381::BlsScalar;
 pub use fr::Fr as JubJubScalar;
+pub use plonk_bls12_381::BlsScalar;
 
 pub(crate) use fr::Fr;
 

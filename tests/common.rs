@@ -1,4 +1,4 @@
-use dusk_jubjub::*;
+use plonk_jubjub::*;
 use rand_core::{RngCore, SeedableRng};
 use rand_xorshift::XorShiftRng;
 
