@@ -3,15 +3,14 @@ authors = [
     "Sean Bowe <ewillbefull@gmail.com>",
     "Eirik Ogilvie-Wigley <eowigley@gmail.com>",
     "Jack Grigg <thestr4d@gmail.com>",
-    "CPerezz <carlos@dusk.network>",
-    "NoCtrlZ<shinsaku.ashizawa@artree.co.jp>"
+    "CPerezz <carlos@dusk.network>"
 ]
 description = "Dusk's fork of the implementation of the Jubjub elliptic curve group"
 homepage = "https://github.com/dusk-network/jubjub"
 license = "MIT/Apache-2.0"
-name = "fullcodec-jubjub"
+name = "dusk-jubjub"
 repository = "https://github.com/dusk-network/jubjub"
-version = "0.2.0"
+version = "0.10.1"
 keywords = ["cryptography", "jubjub", "zk-snarks", "ecc", "elliptic-curve"]
 categories =["algorithms", "cryptography", "science"]
 edition = "2018"
@@ -21,12 +20,12 @@ exclude = [".github/workflows/ci.yml", "github/workflows/rust.yml",
 
 [dependencies]
 dusk-bytes = { version = "0.1", default-features = false }
-bls12_381 = {version = "0.2", default-features = false, package = "fullcodec-bls12_381"}
-subtle = {version = "0.2.0",  default-features = false, package = "fullcodec-subtle"}
+bls12_381 = { git = "https://github.com/AstarNetwork/bls12_381", branch = "master", default-features = false, package = "plonk-bls12_381" }
+subtle = { git = "https://github.com/AstarNetwork/subtle", branch = "main", default-features = false }
 rand_core = {version = "0.6", default-features=false}
 canonical = {version = "0.6", default-features = false, optional = true}
 canonical_derive = {version = "0.6", optional = true}
 
 [dev-dependencies]
-rand_xorshift = {version = "0.2", default-features = false, package = "fullcodec_rand_xorshift"}
+rand_xorshift = { git = "https://github.com/AstarNetwork/rngs", branch = "master", default-features = false, package = "rand_xorshift"}
 blake2 = "0.9"
