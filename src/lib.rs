@@ -42,7 +42,7 @@ extern crate std;
 use canonical_derive::Canon;
 use core::ops::{Add, AddAssign, Mul, MulAssign, Neg, Sub, SubAssign};
 use dusk_bytes::{Error as BytesError, Serializable};
-use parity_subtle as subtle;
+use subtle;
 use subtle::{Choice, ConditionallySelectable, ConstantTimeEq, CtOption};
 
 #[macro_use]
@@ -52,8 +52,8 @@ mod fr;
 /// Implementation of ElGamal encryption scheme with JubJub
 pub mod elgamal;
 
+pub use bls12_381::BlsScalar;
 pub use fr::Fr as JubJubScalar;
-pub use plonk_bls12_381::BlsScalar;
 
 pub(crate) use fr::Fr;
 

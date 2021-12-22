@@ -12,7 +12,7 @@ use core::ops::{Index, IndexMut};
 use dusk_bytes::{Error as BytesError, Serializable};
 use rand_core::{CryptoRng, RngCore};
 
-use parity_subtle as subtle;
+use subtle;
 use subtle::{Choice, ConditionallySelectable, ConstantTimeEq, CtOption};
 
 use crate::util::{adc, mac, sbb};
