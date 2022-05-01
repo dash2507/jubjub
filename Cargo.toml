@@ -20,8 +20,8 @@ exclude = [".github/workflows/ci.yml", "github/workflows/rust.yml",
 
 [dependencies]
 dusk-bytes = { version = "0.1", default-features = false }
-bls12_381 = { git = "https://github.com/AstarNetwork/bls12_381", branch = "master", default-features = false, package = "dusk-bls12_381" }
-subtle = { git = "https://github.com/AstarNetwork/subtle", branch = "main", default-features = false }
+bls12_381 = { git = "https://github.com/dash2507/bls12_381", branch = "use-v4-dev", default-features = false, package = "dusk-bls12_381" }
+subtle = { git = "https://github.com/dash2507/subtle", branch = "fix-tests", default-features = false }
 rand_core = {version = "0.6", default-features=false}
 canonical = {version = "0.6", default-features = false, optional = true}
 canonical_derive = {version = "0.6", optional = true}
